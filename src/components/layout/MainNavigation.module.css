@@ -1,10 +1,10 @@
 .header {
     width: 100%;
-    height: 3rem;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(34, 116, 216);
+    background-color: #D2DAFF;
     padding: 0 10%;
   }
   
@@ -29,13 +29,16 @@
   .header a {
     text-decoration: none;
     /* font-size: 1.5rem; */
-    color: #333;
+    color: #05283c;
+    opacity: 0.6;
   }
-  
+
+ 
   .header a:hover,
   .header a:active,
   .header a.active {
-    color: white;
+    color: #05283c;
+    opacity: 1 !important;
   }
   
   .badge {

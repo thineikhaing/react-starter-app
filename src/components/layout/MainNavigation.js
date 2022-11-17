@@ -1,6 +1,6 @@
-import {Link } from 'react-router-dom';
+import {Link, NavLink } from 'react-router-dom';
 import classes from './MainNavigation.module.css'
-import {useContext} from 'react';
+import { useContext} from 'react';
 import FavouritesContext from '../store/favourites-context';
 
 function MainNavigation(){
@@ -8,15 +8,16 @@ function MainNavigation(){
 
     return(
         <header className={classes.header}>
-        <div> React Meetups </div>
+        <div> <Link style={{ opacity: 1}} to='/'> Fair Form Builder</Link> </div>
         <nav>
             <ul>
-                <li><Link to='/'> All Meetups</Link></li>
-                <li><Link to='/new-meetup'> New Meetups</Link></li>
-                <li><Link to='/favourites'> 
+                <li><NavLink to='/'> Home</NavLink></li>
+                <li><NavLink to='/meetups'> All Meetups</NavLink></li>
+                <li><NavLink to='/new-meetup'> New Meetups</NavLink></li>
+                <li><NavLink to='/favourites' > 
                     My Favourites
                     <span className={classes.badge}>{favouriteCtx.totalFavourites}</span>
-                    </Link>
+                    </NavLink>
                 </li>
             </ul>
         </nav>

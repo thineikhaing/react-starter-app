@@ -1,0 +1,21 @@
+.body--edit .block--empty.block--focussed .DraggingRow::before {
+  content: "Type '/' for quick actions";
+  opacity: 0.3;
+  position: absolute;
+}
+
+.wrapper_class{
+  color: red;
+}
+
+.editor_class{
+  color: darkblue;
+}
+
+.toolbar_class{
+  color: yellow;
+}
+
+.editor_content{
+  border: 2px solid;
+}

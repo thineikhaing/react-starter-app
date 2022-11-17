@@ -1,0 +1,74 @@
+.slashcommand_panel{
+    color: #05283c;
+    background-color: #fff;
+    /* position: absolute; */
+    text-align: left;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    box-shadow: 0px 6px 22px -7px rgba(0,0,0,0.3);
+    border-radius: 7px;
+    left: 0;
+    width: 350px;
+    margin-top: 5px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.grouptitle{
+    font-size: 11px;
+    line-height: 16px;
+    text-transform: uppercase;
+    padding: 6px 15px;
+  }
+
+  .command_option{
+    font-size: 16px;
+    line-height: 21px;
+    padding: 5px 15px 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #05283c;
+    cursor: pointer;
+  }
+
+  .command_option:hover {
+    background-color: var(--grey-light, #f8f8f8);
+  }
+
+.optionContent {
+    flex: 1;
+    padding: 5px;
+  }
+
+.optionIcon {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+    border-radius: 4px;
+    color: #05283c;
+    text-align: center;
+    background-size: 28px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ .optionIcon i {
+    font-size: 27px;
+    line-height: 30px;
+  }
+.optionDescription {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 2px;
+    color: #05283c;
+    opacity: 0.7;
+  }
+  .command_highlight {
+    background-color: #cfd9ea;
+    padding: 1px 8px 1px 8px;
+    margin: 0px 1px;
+    border-radius: 100px;
+  }
