@@ -1,7 +1,7 @@
 .slashcommand_panel{
     color: #05283c;
     background-color: #fff;
-    /* position: absolute; */
+    position: absolute;
     text-align: left;
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
@@ -10,8 +10,9 @@
     left: 0;
     width: 350px;
     margin-top: 5px;
-    max-height: 400px;
+    max-height: 600px;
     overflow: auto;
+    top: 80px;
 }
 
 .grouptitle{

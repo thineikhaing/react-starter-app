@@ -8,10 +8,10 @@ function MainNavigation(){
 
     return(
         <header className={classes.header}>
-        <div> <Link style={{ opacity: 1}} to='/home'> Fair Form Builder</Link> </div>
+        <div> <Link style={{ opacity: 1}} to='/'> Fair Form Builder</Link> </div>
         <nav>
             <ul>
-                <li><NavLink to='/home'> Home</NavLink></li>
+                <li><NavLink to='/'> Home</NavLink></li>
                 <li><NavLink to='/meetups'> All Meetups</NavLink></li>
                 <li><NavLink to='/new-meetup'> New Meetups</NavLink></li>
                 <li><NavLink to='/favourites' > 

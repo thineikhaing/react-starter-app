@@ -22,6 +22,10 @@ h2 {
   color: #2c292b;
 }
 
+.rdw-suggestion-dropdown{
+  position: relative !important;
+}
+
 .active{
   opacity: 1 !important;
 }
@@ -33,6 +37,13 @@ h2 {
 
 .rtl {
   text-align: right;
+}
+
+.top_space{
+  position: absolute; top: 80px; left: 0px; right: 0px; height: 80px;
+}
+.bottom_space{
+  bottom: 0px; left: 0px; right: 0px; height: calc(60vh + 80px);
 }
 
 .editor-container {
@@ -171,3 +182,6 @@ pre::-webkit-scrollbar-thumb {
   background-image: url(./images/emoji/1F642.png);
 } */
 
+.public-DraftStyleDefault-block {
+  margin: 0px !important;
+}

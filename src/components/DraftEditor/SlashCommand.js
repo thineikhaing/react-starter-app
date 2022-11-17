@@ -19,11 +19,7 @@ const questions_list = [
     {icon: "star",title: "Rating", desc: "Rating"},
     {icon: "portrait",title: "Image Upload", desc: "Image Upload"},
     {icon: "attach_file",title: "File Upload", desc: "File Upload"},
-    {icon: "gesture",title: "Signature", desc: "Signature"},
-    // {icon: "attach_money",title: "Price", desc: "Price"},
-    // {icon: "shopping_bag",title: "Product", desc: "Product"},
-    // {icon: "loop",title: "Subscriptions", desc: "Subscriptions"},
-    // {icon: "calculate",title: "Calculation", desc: "Calculation"},
+    {icon: "gesture",title: "Signature", desc: "Signature"}
 ];
 const content_list = [
     {icon: "title",title: "H1 Heading", desc: "Big heading"},
@@ -42,6 +38,7 @@ const quick_questions_list = [
 ];
 
 const SlashCommand = () =>{
+    console.log("slas")
     return(
             <div className={classes.slashcommand_panel}>
                 <div className={classes.grouptitle}>Content</div>
