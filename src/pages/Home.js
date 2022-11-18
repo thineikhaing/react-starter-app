@@ -2,18 +2,21 @@
 import EditorComponent from "../components/DraftEditor/EditorComponent"; 
 import FieldContent from "../components/Fields/FieldContent";
 import classes from './Home.module.css';
-import React, {useEffect, useState } from "react";
+import React, {useEffect, useContext } from "react";
 import SlashCommand from "../components/DraftEditor/SlashCommand";
+import FavouritesContext from "../components/store/favourites-context";
+
 function HomePage(){
 
-    const [fieldList, setFieldList] = useState([]);
+
+    const favCtx = useContext(FavouritesContext)
 
     useEffect( ()=>{
         addMoreField();
     },[]);
 
     const addMoreField = () => {
-        setFieldList(fieldList.concat(<FieldContent key={fieldList.length} />));
+        favCtx.addField();
      };
 
     return <>
@@ -22,7 +25,7 @@ function HomePage(){
             <EditorComponent placeholder="Type '/' for quick actions or choose an option to get started"/>
         </div>
         <div className="FieldSection_wrapper">
-            {fieldList}
+            {favCtx.formFields}
         </div>
         <div className={classes.actions}>
             <button onClick={addMoreField} className={classes.Button}>Add Question</button>

@@ -2,7 +2,6 @@ import classes from './EditorComponent.module.css'
 import { EditorState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import SlashCommand from "./SlashCommand";
 import {  useState } from "react";
 
 const EditorComponent = (props) =>{
@@ -51,34 +50,3 @@ const EditorComponent = (props) =>{
 }
 
 export default EditorComponent;
-
-// import React from "react";
-// import { Editor, EditorState } from "draft-js";
-// import "draft-js/dist/Draft.css";
-// import SlashCommand from "./SlashCommand";
-
-// export default function EditorComponent() {
-//   const [editorState, setEditorState] = React.useState(() =>
-//     EditorState.createEmpty()
-//   );
-
-//   const editor = React.useRef(null);
-//   function focusEditor() {
-//     editor.current.focus();
-//   }
-
-//   return (
-//     <div
-//       style={{ padding: "12px", cursor: "text" }}
-//       onClick={focusEditor}
-//     >
-//         <Editor
-//           ref={editor}
-//           editorState={editorState}
-//           onChange={setEditorState}
-//           placeholder="Type '/' for quick actions or choose an option to get started"
-//         />
-//         <SlashCommand/>
-//     </div>
-//   );
-// }

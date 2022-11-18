@@ -48,6 +48,31 @@
 
 }
 
+.Field_controls{
+  position: absolute;
+  right: calc(-50vw + 348px);
+  width: calc(50vw - 350px);
+  top: 0;
+  padding: 0 24px;
+  color: #ceccc5;
+  height: 85px;
+  line-height: 94px;
+  z-index: 1;
+  /* opacity: 0; */
+  transition: all 0.1s;
+}
+
+.Field_controls span {
+  cursor: pointer;
+  font-size: 24px;
+  margin-right: 14px;
+  transition: color 0.2s;
+  position: relative;
+  z-index: 1;
+}
+
+
+
 .Select{
   box-shadow: none !important;
   min-width: 170px;

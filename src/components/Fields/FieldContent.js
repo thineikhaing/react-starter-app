@@ -1,9 +1,9 @@
 
 import EditorComponent from "../DraftEditor/EditorComponent";
 import Select from 'react-select';
-import Card from '../ui/Card';
 import classes from './FieldContent.module.css'
-
+import FavouritesContext from "../store/favourites-context";
+import React, { useContext } from "react";
 
   const options = [
     {icon: "text_fields",value: "Text", label: "Text"},
@@ -26,16 +26,24 @@ import classes from './FieldContent.module.css'
     {icon: "gesture",value: "Signature", label: "Signature"}
 ];
 
-const FieldContent =()=>{
+const FieldContent =(props)=>{
+
+    const favCtx = useContext(FavouritesContext)
+
+    const removeFormField = (event) => {
+        console.log(event.target.getAttribute('data-index'))
+        favCtx.removeField(event.target.getAttribute('data-index'))
+        
+     };
 
     return(
         <>
-        <div className={classes.Field}>
+        <div className={`FieldWrapper ${classes.Field}`}  data-index={props.index}>
             <div className={classes.Field_Header}>
                 <div className={classes.Field_Header_label}>
                     <EditorComponent placeholder="What is your question?"/>
                 </div>
-                <div className={classes.Field_controls}>
+                <div className={classes.Field_types}>
                     <div className={classes.Select}>
                         <Select options={options} defaultValue={options[0]} isSearchable/>
                     </div>
@@ -44,7 +52,11 @@ const FieldContent =()=>{
             <div className={classes.Field_hint}>
                 <EditorComponent placeholder="Add some help text"/>
             </div>
+            <div className={classes.Field_controls}>
             
+                <span className="material-icons">drag_indicator</span>
+                <span onClick={removeFormField} data-index={props.index} data-hover="Remove" className="material-icons">close</span>
+            </div>
         </div>
         
         </>

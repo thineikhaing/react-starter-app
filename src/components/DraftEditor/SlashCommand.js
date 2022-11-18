@@ -38,7 +38,6 @@ const quick_questions_list = [
 ];
 
 const SlashCommand = () =>{
-    console.log("slas")
     return(
             <div className={classes.slashcommand_panel}>
                 <div className={classes.grouptitle}>Content</div>

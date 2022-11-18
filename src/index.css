@@ -185,3 +185,35 @@ pre::-webkit-scrollbar-thumb {
 .public-DraftStyleDefault-block {
   margin: 0px !important;
 }
+
+.material-icons[data-hover]::before {
+  content: attr(data-hover);
+  font-family: 'Work Sans';
+  position: absolute;
+  top: -36px;
+  min-width: 120px;
+  border-radius: 4px;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  color: #647178;
+  background-color: #fff;
+  left: 50%;
+  font-weight: 400;
+  box-shadow: 0 11px 50px -10px rgb(0 0 0 / 30%);
+  margin-left: -60px;
+  text-align: center;
+  text-transform: none;
+  display: block;
+  font-size: 14px;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.2s;
+  transform: translateY(3px);
+  pointer-events: none;
+}
+
+.material-icons[data-hover]:hover::before{
+  visibility: visible;
+  opacity: 1;
+}
