@@ -29,12 +29,17 @@ import React, { useContext } from "react";
 const FieldContent =(props)=>{
 
     const favCtx = useContext(FavouritesContext)
+    
 
     const removeFormField = (event) => {
         console.log(event.target.getAttribute('data-index'))
         favCtx.removeField(event.target.getAttribute('data-index'))
         
      };
+
+    const openModal =()=>{
+        console.log("toggle Modal")
+    }
 
     return(
         <>
@@ -53,8 +58,8 @@ const FieldContent =(props)=>{
                 <EditorComponent placeholder="Add some help text"/>
             </div>
             <div className={classes.Field_controls}>
-            
-                <span className="material-icons">drag_indicator</span>
+                <span className="material-icons" >drag_indicator</span>
+                <span className="material-icons" onClick={favCtx.toggleModal} data-hover="Settings">settings</span>
                 <span onClick={removeFormField} data-index={props.index} data-hover="Remove" className="material-icons">close</span>
             </div>
         </div>

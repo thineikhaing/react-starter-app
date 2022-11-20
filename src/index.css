@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700|Material+Icons');
 
-
+#root{
+  min-height: 100%;
+}
 * {
   box-sizing: border-box;
 }
@@ -216,4 +218,65 @@ pre::-webkit-scrollbar-thumb {
 .material-icons[data-hover]:hover::before{
   visibility: visible;
   opacity: 1;
+}
+
+
+.modal {
+  /* position: relative;
+  background-color: #fff;
+  width: 500px;
+  height: 200px;
+  border: 1px solid rgb(179, 179, 179);
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0 15px 160px; */
+
+  inset: 10px 225.5px;
+  position: fixed;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: rgb(0 0 0 / 40%) 0px 25px 100px -20px;
+  z-index: 105;
+  opacity: 1;
+
+}
+
+.modal .footer {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(243, 244, 246);
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  padding: 10px 1.5rem;
+  flex-direction: row-reverse;
+}
+
+.modal-wrapper {
+  display: flex;
+  /* position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  
+  z-index: 9;
+  width: 100%;
+  min-height: 100vh; */
+  position: fixed;
+  z-index: 104;
+  inset: 0px;
+  background-color: rgba(107, 114, 128, 0.5);
+}
+
+.modal .body {
+  backface-visibility: hidden;
+  transform: translate3d(0px, 0px, 0px);
+  opacity: 1;
+  transition: opacity 0.35s ease 0s;
+  height: 100%;
+  padding: 36px;
+  overflow: auto;
 }

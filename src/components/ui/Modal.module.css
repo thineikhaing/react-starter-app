@@ -1,0 +1,21 @@
+.button{
+    height: 38px;
+    padding: 0 24px;
+    font-size: 16px;
+    line-height: 1;
+    color: #05283c;
+    background-color: #D2DAFF;
+    font-weight: 400;
+    font-family: Work Sans;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 17px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    user-select: none;
+    transform: translateY(0);
+    transition: all 0.3s;
+    border: none;;
+}

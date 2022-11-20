@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import FieldContent from "../Fields/FieldContent";
+import useModal from "../ui/useModal";
 
 const FavouritesContext = createContext({
     favourites: [],
@@ -10,12 +11,16 @@ const FavouritesContext = createContext({
     formFields: [],
     addField: ()=>{},
     removeField: (fieldId)=>{},
+    isShowingModal: false,
+    toggleModal: ()=>{}
+
 });
 
 export function FavouritesContextProvider(props){
 
     const [userFavourites, setUserFavourites] = useState([]);
     const [userFields, setUserFields] = useState([]);
+    const [isShowingModal, toggleModal] = useModal();
 
     function addFavouriteHandler(favouriteMeetup){
         setUserFavourites((prevUserFavourites)=>{
@@ -38,7 +43,6 @@ export function FavouritesContextProvider(props){
         setUserFields((prevFields) =>{
             return prevFields.concat((<FieldContent key={userFields.length} index={userFields.length} />))
         })
-
     }
 
     function removeFieldHandler(fieldId){ 
@@ -55,7 +59,9 @@ export function FavouritesContextProvider(props){
         removeFavourite: removeFavouriteHandler,
         itemIsFavourite: itemIsFavouriteHandler,
         addField: addFieldHandler,
-        removeField: removeFieldHandler
+        removeField: removeFieldHandler,
+        isShowingModal: isShowingModal,
+        toggleModal: toggleModal
     }; 
 
     return <FavouritesContext.Provider value={context}>

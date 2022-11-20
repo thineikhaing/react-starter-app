@@ -43,7 +43,7 @@ const SlashCommand = () =>{
                 <div className={classes.grouptitle}>Content</div>
                 {
                     content_list.map((question,i) => 
-                        <div className={classes.command_option} key={i}> 
+                        <div className={classes.command_option} key={i} data-type={question.title}> 
                             <CommandItem icon={question.icon} title={question.title} desc={question.desc}/>
                         </div>
                     )
